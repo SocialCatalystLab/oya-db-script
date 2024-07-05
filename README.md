@@ -12,8 +12,8 @@ This script automatically fetches spreadsheets from the Oya Provisio database on
 
 1. Clone the repository:
     ```sh
-    git clone https://github.com/yourusername/oya-provisio-fetcher.git
-    cd oya-provisio-fetcher
+    git clone https://github.com/olafdrw/oya-db-script.git
+    cd oya-db-script
     ```
 
 2. Install the required dependencies
