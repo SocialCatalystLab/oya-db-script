@@ -40,7 +40,6 @@ driver.find_element_by_id("txtUserPassword").send_keys("123456")
 # click login
 driver.find_element_by_id("cmbLogin").click()
 
-# TEMP FIX TO OVERRIDE FFOX WARNINGS
 time.sleep(10)
 print("start post-login")
 
@@ -70,15 +69,15 @@ for handle in driver.window_handles:
         driver.switch_to.window(popup)
 
 # click download report in Excel
-button2 = WebDriverWait(driver, 60).until(
+button3 = WebDriverWait(driver, 60).until(
         EC.presence_of_element_located((By.ID, "Button3"))
     )
-button2.click()
+button3.click()
 
 # accept alert dialog
 driver.switch_to.alert.accept()
 
-time.sleep(5)
+time.sleep(120)
 
 # -- End LOAN STATUS script --
 
@@ -134,11 +133,17 @@ for handle in driver.window_handles:
 # driver.find_element_by_id("txtDt").clear()
 # driver.find_element_by_id("txtDt").send_keys("7/3/2024")
 
-# click export
+# click show report
 button1 = WebDriverWait(driver, 20).until(
-        EC.presence_of_element_located((By.NAME, "CrystalReportViewer1$ctl02$ctl00"))
+        EC.presence_of_element_located((By.NAME, "Button1"))
     )
 button1.click()
+
+# click export
+exportbutton = WebDriverWait(driver, 20).until(
+        EC.presence_of_element_located((By.NAME, "CrystalReportViewer1$ctl02$ctl00"))
+    )
+exportbutton.click() # WORKS UNTIL HERE
 
 # Switch to new popup window
 for handle in driver.window_handles:
@@ -147,7 +152,9 @@ for handle in driver.window_handles:
         driver.switch_to.window(popup)
 
 # select MS Excel 97-2000 (Data Only)
-select = Select(driver.find_element_by_id('exportFormatList'))
+select = Select(WebDriverWait(driver, 20).until(
+        EC.presence_of_element_located((By.ID, "exportFormatList"))
+    ))
 select.select_by_value('RecordToMSExcel')
 
 # click ok
@@ -157,72 +164,72 @@ time.sleep(120)
 
 # -- End LOAN ASSESSMENT script --
 
-# -- Start LOAN DISBURSEMENT script --
+# # -- Start LOAN DISBURSEMENT script --
 
-# Store the current window handle
-main_window = driver.current_window_handle
+# # Store the current window handle
+# main_window = driver.current_window_handle
 
-# Open the login page
-driver.get('https://backupfs.provisocloud.com:255/default.aspx')
+# # Open the login page
+# driver.get('https://backupfs.provisocloud.com:255/default.aspx')
 
-# enter username
-driver.find_element_by_id("txtUserID").send_keys("505")
-# enter password
-driver.find_element_by_id("txtUserPassword").send_keys("123456")
-# click login
-driver.find_element_by_id("cmbLogin").click()
+# # enter username
+# driver.find_element_by_id("txtUserID").send_keys("505")
+# # enter password
+# driver.find_element_by_id("txtUserPassword").send_keys("123456")
+# # click login
+# driver.find_element_by_id("cmbLogin").click()
 
-# TEMP FIX TO OVERRIDE FFOX WARNINGS
-time.sleep(10)
-print("start post-login")
+# # TEMP FIX TO OVERRIDE FFOX WARNINGS
+# time.sleep(10)
+# print("start post-login")
 
-# Switch to popup window
-for handle in driver.window_handles:
-    if handle != main_window: 
-        popup = handle
-        driver.switch_to.window(popup)
+# # Switch to popup window
+# for handle in driver.window_handles:
+#     if handle != main_window: 
+#         popup = handle
+#         driver.switch_to.window(popup)
 
-# click report menu
-driver.find_element_by_id("TreeView15t0").click() 
-# click loans report
-driver.find_element_by_id("TreeView15t46").click()
-# click loan transaction report
-driver.find_element_by_id("TreeView15t75").click()
-# click loan disbursement report
-driver.find_element_by_id("TreeView15t76").click()
-# click loan disbursement report [general]
-driver.find_element_by_id("TreeView15t77").click()
+# # click report menu
+# driver.find_element_by_id("TreeView15t0").click() 
+# # click loans report
+# driver.find_element_by_id("TreeView15t46").click()
+# # click loan transaction report
+# driver.find_element_by_id("TreeView15t75").click()
+# # click loan disbursement report
+# driver.find_element_by_id("TreeView15t76").click()
+# # click loan disbursement report [general]
+# driver.find_element_by_id("TreeView15t77").click()
 
-time.sleep(5)
+# time.sleep(5)
 
-# Switch to new popup window
-for handle in driver.window_handles:
-    if handle != main_window: 
-        popup = handle
-        driver.switch_to.window(popup)
+# # Switch to new popup window
+# for handle in driver.window_handles:
+#     if handle != main_window: 
+#         popup = handle
+#         driver.switch_to.window(popup)
 
-# FUTURE: set date range in date fields
-# from date
-driver.find_element_by_id("txtDf").clear()
-driver.find_element_by_id("txtDf").send_keys("7/1/2024")
-# to date
-driver.find_element_by_id("txtDt").clear()
-driver.find_element_by_id("txtDt").send_keys("7/3/2024")
+# # FUTURE: set date range in date fields
+# # from date
+# driver.find_element_by_id("txtDf").clear()
+# driver.find_element_by_id("txtDf").send_keys("7/1/2024")
+# # to date
+# driver.find_element_by_id("txtDt").clear()
+# driver.find_element_by_id("txtDt").send_keys("7/3/2024")
 
-# click show report
-button1 = WebDriverWait(driver, 20).until(
-        EC.presence_of_element_located((By.ID, "Button1"))
-    )
-button1.click()
+# # click show report
+# button1 = WebDriverWait(driver, 20).until(
+#         EC.presence_of_element_located((By.ID, "Button1"))
+#     )
+# button1.click()
 
-# click download report in Excel
-button2 = WebDriverWait(driver, 60).until(
-        EC.presence_of_element_located((By.ID, "Button2"))
-    )
-button2.click()
+# # click download report in Excel
+# button2 = WebDriverWait(driver, 60).until(
+#         EC.presence_of_element_located((By.ID, "Button2"))
+#     )
+# button2.click()
 
-time.sleep(120)
+# time.sleep(120)
 
-driver.quit()
+# driver.quit()
 
 # -- End LOAN DISBURSEMENT script --
