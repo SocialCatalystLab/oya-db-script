@@ -2,7 +2,7 @@
 
 ## Overview
 
-This script automatically fetches spreadsheets from the Oya Provisio database on a daily basis.
+This script automatically fetches spreadsheets from the Oya Proviso database on a daily basis and downloads them locally (for now). Next step is uploading to Azure.
 
 ## Requirements
 
@@ -12,8 +12,8 @@ This script automatically fetches spreadsheets from the Oya Provisio database on
 
 1. Clone the repository:
     ```sh
-    git clone https://github.com/yourusername/oya-provisio-fetcher.git
-    cd oya-provisio-fetcher
+    git clone https://github.com/olafdrw/oya-db-script.git
+    cd oya-db-script
     ```
 
 2. Install the required dependencies
