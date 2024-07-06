@@ -773,3 +773,73 @@ console.warn: LoginRecipes: "Falling back to a synchronous message for: https://
 1720165889508	addons.xpi	ERROR	System addon update list error SyntaxError: XMLHttpRequest.open: 'http://%(server)s/dummy-system-addons.xml' is not a valid URL.
 1720165920342	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
 1720166045604	Marionette	INFO	Stopped listening on port 57907
+1720196815108	addons.xpi	ERROR	System addon update list error SyntaxError: XMLHttpRequest.open: 'http://%(server)s/dummy-system-addons.xml' is not a valid URL.
+1720201677220	addons.xpi	ERROR	System addon update list error SyntaxError: XMLHttpRequest.open: 'http://%(server)s/dummy-system-addons.xml' is not a valid URL.
+1720256379649	geckodriver	INFO	Listening on 127.0.0.1:55693
+1720256379698	mozrunner::runner	INFO	Running command: MOZ_CRASHREPORTER="1" MOZ_CRASHREPORTER_NO_REPORT="1" MOZ_CRASHREPORTER_SHUTDOWN="1" MOZ_NO_REMOTE="1" "/App ... s" "localhost" "-foreground" "-no-remote" "-profile" "/var/folders/b5/t7zbkw314f98hkdc4mkkb0cm0000gn/T/rust_mozprofilejLoqPa"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1720256380311	Marionette	INFO	Marionette enabled
+console.error: "Warning: unrecognized command line flag" "-remote-allow-hosts"
+1720256380884	Marionette	INFO	Listening on port 55699
+WebDriver BiDi listening on ws://127.0.0.1:55694
+1720256381008	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:55694/devtools/browser/75d31dd2-34e1-4a88-b732-603f58cb90af
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://backupfs.provisocloud.com:255."
+1720256412584	addons.xpi	ERROR	System addon update list error SyntaxError: XMLHttpRequest.open: 'http://%(server)s/dummy-system-addons.xml' is not a valid URL.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+1720257371172	geckodriver	INFO	Listening on 127.0.0.1:56191
+1720257371226	mozrunner::runner	INFO	Running command: MOZ_CRASHREPORTER="1" MOZ_CRASHREPORTER_NO_REPORT="1" MOZ_CRASHREPORTER_SHUTDOWN="1" MOZ_NO_REMOTE="1" "/App ... s" "localhost" "-foreground" "-no-remote" "-profile" "/var/folders/b5/t7zbkw314f98hkdc4mkkb0cm0000gn/T/rust_mozprofileoMgups"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1720257371810	Marionette	INFO	Marionette enabled
+console.error: "Warning: unrecognized command line flag" "-remote-allow-hosts"
+1720257372352	Marionette	INFO	Listening on port 56198
+WebDriver BiDi listening on ws://127.0.0.1:56192
+1720257372464	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:56192/devtools/browser/15285a20-4789-4703-8aea-95393828838b
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://backupfs.provisocloud.com:255."
+1720257393679	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
+TimedPromise/<@chrome://remote/content/marionette/sync.sys.mjs:219:24
+TimedPromise@chrome://remote/content/marionette/sync.sys.mjs:203:10
+interaction.flushEventLoop@chrome://remote/content/marionette/interaction.sys.mjs:467:10
+webdriverClickElement@chrome://remote/content/marionette/interaction.sys.mjs:220:33
+1720257401847	addons.xpi	ERROR	System addon update list error SyntaxError: XMLHttpRequest.open: 'http://%(server)s/dummy-system-addons.xml' is not a valid URL.
+1720257513332	Marionette	INFO	Stopped listening on port 56198
+JavaScript error: resource://gre/modules/Prompter.sys.mjs, line 1212: NS_ERROR_NOT_AVAILABLE: prompt aborted by user
+1720257547202	geckodriver	INFO	Listening on 127.0.0.1:56443
+1720257547233	mozrunner::runner	INFO	Running command: MOZ_CRASHREPORTER="1" MOZ_CRASHREPORTER_NO_REPORT="1" MOZ_CRASHREPORTER_SHUTDOWN="1" MOZ_NO_REMOTE="1" "/App ... s" "localhost" "-foreground" "-no-remote" "-profile" "/var/folders/b5/t7zbkw314f98hkdc4mkkb0cm0000gn/T/rust_mozprofile94cz5T"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1720257547774	Marionette	INFO	Marionette enabled
+console.error: "Warning: unrecognized command line flag" "-remote-allow-hosts"
+1720257548377	Marionette	INFO	Listening on port 56449
+WebDriver BiDi listening on ws://127.0.0.1:56444
+1720257548483	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:56444/devtools/browser/45f3bc50-cf4e-4adc-8be4-2b209e3b399a
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://backupfs.provisocloud.com:255."
+1720257571539	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
+TimedPromise/<@chrome://remote/content/marionette/sync.sys.mjs:219:24
+TimedPromise@chrome://remote/content/marionette/sync.sys.mjs:203:10
+interaction.flushEventLoop@chrome://remote/content/marionette/interaction.sys.mjs:467:10
+webdriverClickElement@chrome://remote/content/marionette/interaction.sys.mjs:220:33
+1720257577966	addons.xpi	ERROR	System addon update list error SyntaxError: XMLHttpRequest.open: 'http://%(server)s/dummy-system-addons.xml' is not a valid URL.
+1720258308545	geckodriver	INFO	Listening on 127.0.0.1:56944
+1720258308568	mozrunner::runner	INFO	Running command: MOZ_CRASHREPORTER="1" MOZ_CRASHREPORTER_NO_REPORT="1" MOZ_CRASHREPORTER_SHUTDOWN="1" MOZ_NO_REMOTE="1" "/App ... s" "localhost" "-foreground" "-no-remote" "-profile" "/var/folders/b5/t7zbkw314f98hkdc4mkkb0cm0000gn/T/rust_mozprofileXLz5ug"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1720258309092	Marionette	INFO	Marionette enabled
+console.error: "Warning: unrecognized command line flag" "-remote-allow-hosts"
+1720258309643	Marionette	INFO	Listening on port 56950
+WebDriver BiDi listening on ws://127.0.0.1:56945
+1720258309754	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:56945/devtools/browser/2237d510-81a1-4383-adbe-44b8c9ff3873
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://backupfs.provisocloud.com:255."
+1720258339166	addons.xpi	ERROR	System addon update list error SyntaxError: XMLHttpRequest.open: 'http://%(server)s/dummy-system-addons.xml' is not a valid URL.
+1720258386500	Marionette	INFO	Stopped listening on port 56449
+JavaScript error: resource://gre/modules/Prompter.sys.mjs, line 1212: NS_ERROR_NOT_AVAILABLE: prompt aborted by user
+1720258451061	Marionette	INFO	Stopped listening on port 56950
