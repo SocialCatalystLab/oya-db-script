@@ -2,7 +2,7 @@
 
 ## Overview
 
-This script automatically fetches spreadsheets from the Oya Provisio database on a daily basis and downloads them locally (for now). Next step is uploading to Azure.
+This script automatically fetches spreadsheets from the Oya Proviso database on a daily basis and downloads them locally (for now). Next step is uploading to Azure.
 
 ## Requirements
 
