@@ -21,65 +21,65 @@ driver = webdriver.Firefox(service=service, options=firefox_options)
 
 # Files to fetch:
 # Loan status report DONE
-# Loan assessment report NOT DONE
+# Loan assessment report DONE
 # Loan disbursement report DONE
-# Loan applications report NOT DONE
+# Loan applications report DONE
 
-# # -- Start LOAN STATUS script --
+# -- Start LOAN STATUS script --
 
-# # Store the current window handle
-# main_window = driver.current_window_handle
+# Store the current window handle
+main_window = driver.current_window_handle
 
-# # Open the login page
-# driver.get('https://backupfs.provisocloud.com:255/default.aspx')
+# Open the login page
+driver.get('https://backupfs.provisocloud.com:255/default.aspx')
 
-# # enter username
-# driver.find_element_by_id("txtUserID").send_keys("505")
-# # enter password
-# driver.find_element_by_id("txtUserPassword").send_keys("123456")
-# # click login
-# driver.find_element_by_id("cmbLogin").click()
+# enter username
+driver.find_element_by_id("txtUserID").send_keys("505")
+# enter password
+driver.find_element_by_id("txtUserPassword").send_keys("123456")
+# click login
+driver.find_element_by_id("cmbLogin").click()
 
-# time.sleep(10)
-# print("start post-login")
+time.sleep(10)
+print("start post-login")
 
-# # Switch to popup window
-# for handle in driver.window_handles:
-#     if handle != main_window: 
-#         popup = handle
-#         driver.switch_to.window(popup)
+# Switch to popup window
+for handle in driver.window_handles:
+    if handle != main_window: 
+        popup = handle
+        driver.switch_to.window(popup)
 
-# # click report menu
-# driver.find_element_by_id("TreeView15t0").click() 
-# # click loans report
-# driver.find_element_by_id("TreeView15t46").click()
-# # click loan transaction report
-# driver.find_element_by_id("TreeView15t75").click()
-# # click loan status report
-# driver.find_element_by_id("TreeView15t120").click()
-# # click loan status report
-# driver.find_element_by_id("TreeView15t121").click()
+# click report menu
+driver.find_element_by_id("TreeView15t0").click() 
+# click loans report
+driver.find_element_by_id("TreeView15t46").click()
+# click loan transaction report
+driver.find_element_by_id("TreeView15t75").click()
+# click loan status report
+driver.find_element_by_id("TreeView15t120").click()
+# click loan status report
+driver.find_element_by_id("TreeView15t121").click()
 
-# time.sleep(5)
+time.sleep(5)
 
-# # Switch to new popup window
-# for handle in driver.window_handles:
-#     if handle != main_window: 
-#         popup = handle
-#         driver.switch_to.window(popup)
+# Switch to new popup window
+for handle in driver.window_handles:
+    if handle != main_window: 
+        popup = handle
+        driver.switch_to.window(popup)
 
-# # click download report in Excel
-# button3 = WebDriverWait(driver, 60).until(
-#         EC.presence_of_element_located((By.ID, "Button3"))
-#     )
-# button3.click()
+# click download report in Excel
+button3 = WebDriverWait(driver, 60).until(
+        EC.presence_of_element_located((By.ID, "Button3"))
+    )
+button3.click()
 
-# # accept alert dialog
-# driver.switch_to.alert.accept()
+# accept alert dialog
+driver.switch_to.alert.accept()
 
-# time.sleep(120)
+time.sleep(120)
 
-# # -- End LOAN STATUS script --
+# -- End LOAN STATUS script --
 
 # -- Start LOAN ASSESSMENT script --
 
@@ -167,6 +167,11 @@ driver.quit()
 # -- End LOAN ASSESSMENT script --
 
 # -- Start LOAN DISBURSEMENT script --
+
+# initialize new driver
+firefox_options = FirefoxOptions()
+service = FirefoxService(GeckoDriverManager().install())
+driver = webdriver.Firefox(service=service, options=firefox_options)
 
 # Store the current window handle
 main_window = driver.current_window_handle
