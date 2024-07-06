@@ -949,3 +949,71 @@ console.warn: LoginRecipes: "Falling back to a synchronous message for: https://
 console.warn: LoginRecipes: "Falling back to a synchronous message for: https://backupfs.provisocloud.com:255."
 1720261721325	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
 JavaScript error: resource://gre/modules/DownloadCore.sys.mjs, line 2277: NS_ERROR_NOT_AVAILABLE: Component returned failure code: 0x80040111 (NS_ERROR_NOT_AVAILABLE) [nsIHttpChannel.responseStatus]
+1720269315621	Marionette	INFO	Stopped listening on port 59050
+console.error: "Failed to fetch https://spocs.getpocket.com/user:" "NetworkError when attempting to fetch resource."
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+1720269332947	geckodriver	INFO	Listening on 127.0.0.1:59438
+1720269332989	mozrunner::runner	INFO	Running command: MOZ_CRASHREPORTER="1" MOZ_CRASHREPORTER_NO_REPORT="1" MOZ_CRASHREPORTER_SHUTDOWN="1" MOZ_NO_REMOTE="1" "/App ... s" "localhost" "-foreground" "-no-remote" "-profile" "/var/folders/b5/t7zbkw314f98hkdc4mkkb0cm0000gn/T/rust_mozprofilex0IlGa"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1720269333368	Marionette	INFO	Marionette enabled
+console.error: "Warning: unrecognized command line flag" "-remote-allow-hosts"
+1720269333803	Marionette	INFO	Listening on port 59445
+WebDriver BiDi listening on ws://127.0.0.1:59439
+1720269333996	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:59439/devtools/browser/d10b29b2-2478-4b1f-a77b-7e6ed726c550
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://backupfs.provisocloud.com:255."
+1720269363394	addons.xpi	ERROR	System addon update list error SyntaxError: XMLHttpRequest.open: 'http://%(server)s/dummy-system-addons.xml' is not a valid URL.
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://backupfs.provisocloud.com:255."
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+1720269819545	geckodriver	INFO	Listening on 127.0.0.1:59607
+1720269819577	mozrunner::runner	INFO	Running command: MOZ_CRASHREPORTER="1" MOZ_CRASHREPORTER_NO_REPORT="1" MOZ_CRASHREPORTER_SHUTDOWN="1" MOZ_NO_REMOTE="1" "/App ... s" "localhost" "-foreground" "-no-remote" "-profile" "/var/folders/b5/t7zbkw314f98hkdc4mkkb0cm0000gn/T/rust_mozprofilevkPYpH"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1720269819966	Marionette	INFO	Marionette enabled
+console.error: "Warning: unrecognized command line flag" "-remote-allow-hosts"
+1720269820373	Marionette	INFO	Listening on port 59613
+WebDriver BiDi listening on ws://127.0.0.1:59608
+1720269820606	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:59608/devtools/browser/afbcb203-9fc5-4c32-9149-a06b1144522e
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://backupfs.provisocloud.com:255."
+1720269850031	addons.xpi	ERROR	System addon update list error SyntaxError: XMLHttpRequest.open: 'http://%(server)s/dummy-system-addons.xml' is not a valid URL.
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://backupfs.provisocloud.com:255."
+1720270156497	Marionette	INFO	Stopped listening on port 59613
+JavaScript error: , line 0: NotFoundError: No such JSProcessActor 'DevToolsProcess'
+JavaScript error: , line 0: NotFoundError: No such JSProcessActor 'DevToolsProcess'
+JavaScript error: , line 0: NotFoundError: No such JSProcessActor 'DevToolsProcess'
+1720270178882	geckodriver	INFO	Listening on 127.0.0.1:59731
+1720270178917	mozrunner::runner	INFO	Running command: MOZ_CRASHREPORTER="1" MOZ_CRASHREPORTER_NO_REPORT="1" MOZ_CRASHREPORTER_SHUTDOWN="1" MOZ_NO_REMOTE="1" "/App ... s" "localhost" "-foreground" "-no-remote" "-profile" "/var/folders/b5/t7zbkw314f98hkdc4mkkb0cm0000gn/T/rust_mozprofilelEU613"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1720270179506	Marionette	INFO	Marionette enabled
+console.error: "Warning: unrecognized command line flag" "-remote-allow-hosts"
+1720270180080	Marionette	INFO	Listening on port 59737
+WebDriver BiDi listening on ws://127.0.0.1:59732
+1720270180192	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:59732/devtools/browser/c0345f60-56eb-4e8d-a57d-2494184d0755
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://backupfs.provisocloud.com:255."
+1720270209553	addons.xpi	ERROR	System addon update list error SyntaxError: XMLHttpRequest.open: 'http://%(server)s/dummy-system-addons.xml' is not a valid URL.
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://backupfs.provisocloud.com:255."
+1720270445844	geckodriver	INFO	Listening on 127.0.0.1:59858
+1720270445883	mozrunner::runner	INFO	Running command: MOZ_CRASHREPORTER="1" MOZ_CRASHREPORTER_NO_REPORT="1" MOZ_CRASHREPORTER_SHUTDOWN="1" MOZ_NO_REMOTE="1" "/App ... s" "localhost" "-foreground" "-no-remote" "-profile" "/var/folders/b5/t7zbkw314f98hkdc4mkkb0cm0000gn/T/rust_mozprofileWg6rEQ"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1720270446289	Marionette	INFO	Marionette enabled
+console.error: "Warning: unrecognized command line flag" "-remote-allow-hosts"
+1720270446714	Marionette	INFO	Listening on port 59864
+WebDriver BiDi listening on ws://127.0.0.1:59859
+1720270446934	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:59859/devtools/browser/b8b08bae-0191-465d-b237-9308028762f8
+1720270450139	Marionette	INFO	Stopped listening on port 59737
+JavaScript error: , line 0: NotFoundError: No such JSProcessActor 'DevToolsProcess'
+JavaScript error: , line 0: NotFoundError: No such JSProcessActor 'DevToolsProcess'
+JavaScript error: , line 0: NotFoundError: No such JSProcessActor 'DevToolsProcess'
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://backupfs.provisocloud.com:255."
+1720270476454	addons.xpi	ERROR	System addon update list error SyntaxError: XMLHttpRequest.open: 'http://%(server)s/dummy-system-addons.xml' is not a valid URL.
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://backupfs.provisocloud.com:255."
