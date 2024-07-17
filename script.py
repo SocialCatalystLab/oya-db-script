@@ -11,6 +11,7 @@ from webdriver_manager.firefox import GeckoDriverManager
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.ui import Select
+from datetime import datetime
 import time
 
 # Set options
@@ -28,217 +29,217 @@ driver = webdriver.Firefox(service=service, options=firefox_options)
 # -- Start LOAN STATUS script --
 
 # Store the current window handle
-main_window = driver.current_window_handle
+# main_window = driver.current_window_handle
 
-# Open the login page
-driver.get('https://backupfs.provisocloud.com:255/default.aspx')
+# # Open the login page
+# driver.get('https://backupfs.provisocloud.com:255/default.aspx')
 
-# enter username
-driver.find_element_by_id("txtUserID").send_keys("505")
-# enter password
-driver.find_element_by_id("txtUserPassword").send_keys("123456")
-# click login
-driver.find_element_by_id("cmbLogin").click()
+# # enter username
+# driver.find_element_by_id("txtUserID").send_keys("505")
+# # enter password
+# driver.find_element_by_id("txtUserPassword").send_keys("123456")
+# # click login
+# driver.find_element_by_id("cmbLogin").click()
 
-time.sleep(10)
-print("start post-login")
+# time.sleep(10)
+# print("start post-login")
 
-# Switch to popup window
-for handle in driver.window_handles:
-    if handle != main_window: 
-        popup = handle
-        driver.switch_to.window(popup)
+# # Switch to popup window
+# for handle in driver.window_handles:
+#     if handle != main_window: 
+#         popup = handle
+#         driver.switch_to.window(popup)
 
-# click report menu
-driver.find_element_by_id("TreeView15t0").click() 
-# click loans report
-driver.find_element_by_id("TreeView15t46").click()
-# click loan transaction report
-driver.find_element_by_id("TreeView15t75").click()
-# click loan status report
-driver.find_element_by_id("TreeView15t120").click()
-# click loan status report
-driver.find_element_by_id("TreeView15t121").click()
+# # click report menu
+# driver.find_element_by_id("TreeView15t0").click() 
+# # click loans report
+# driver.find_element_by_id("TreeView15t46").click()
+# # click loan transaction report
+# driver.find_element_by_id("TreeView15t75").click()
+# # click loan status report
+# driver.find_element_by_id("TreeView15t120").click()
+# # click loan status report
+# driver.find_element_by_id("TreeView15t121").click()
 
-time.sleep(5)
+# time.sleep(5)
 
-# Switch to new popup window
-for handle in driver.window_handles:
-    if handle != main_window: 
-        popup = handle
-        driver.switch_to.window(popup)
+# # Switch to new popup window
+# for handle in driver.window_handles:
+#     if handle != main_window: 
+#         popup = handle
+#         driver.switch_to.window(popup)
 
-# click download report in Excel
-button3 = WebDriverWait(driver, 60).until(
-        EC.presence_of_element_located((By.ID, "Button3"))
-    )
-button3.click()
+# # click download report in Excel
+# button3 = WebDriverWait(driver, 60).until(
+#         EC.presence_of_element_located((By.ID, "Button3"))
+#     )
+# button3.click()
 
-# accept alert dialog
-driver.switch_to.alert.accept()
+# # accept alert dialog
+# driver.switch_to.alert.accept()
 
-time.sleep(120)
+# time.sleep(120)
 
 # -- End LOAN STATUS script --
 
 # -- Start LOAN ASSESSMENT script --
 
-# Store the current window handle
-main_window = driver.current_window_handle
+# # Store the current window handle
+# main_window = driver.current_window_handle
 
-# Open the login page
-driver.get('https://backupfs.provisocloud.com:255/default.aspx')
+# # Open the login page
+# driver.get('https://backupfs.provisocloud.com:255/default.aspx')
 
-# enter username
-driver.find_element_by_id("txtUserID").send_keys("505")
-# enter password
-driver.find_element_by_id("txtUserPassword").send_keys("123456")
-# click login
-driver.find_element_by_id("cmbLogin").click()
+# # enter username
+# driver.find_element_by_id("txtUserID").send_keys("505")
+# # enter password
+# driver.find_element_by_id("txtUserPassword").send_keys("123456")
+# # click login
+# driver.find_element_by_id("cmbLogin").click()
 
-# TEMP FIX TO OVERRIDE FFOX WARNINGS
-time.sleep(10)
-print("start post-login")
+# # TEMP FIX TO OVERRIDE FFOX WARNINGS
+# time.sleep(10)
+# print("start post-login")
 
-# Switch to popup window
-for handle in driver.window_handles:
-    if handle != main_window: 
-        popup = handle
-        driver.switch_to.window(popup)
+# # Switch to popup window
+# for handle in driver.window_handles:
+#     if handle != main_window: 
+#         popup = handle
+#         driver.switch_to.window(popup)
 
-# click report menu
-driver.find_element_by_id("TreeView15t0").click() 
-# click loans report
-driver.find_element_by_id("TreeView15t46").click()
-# click loan application report
-driver.find_element_by_id("TreeView15t47").click()
-# click loan assessment report
-driver.find_element_by_id("TreeView15t56").click()
-# click loan assessment report [general]
-driver.find_element_by_id("TreeView15t57").click()
+# # click report menu
+# driver.find_element_by_id("TreeView15t0").click() 
+# # click loans report
+# driver.find_element_by_id("TreeView15t46").click()
+# # click loan application report
+# driver.find_element_by_id("TreeView15t47").click()
+# # click loan assessment report
+# driver.find_element_by_id("TreeView15t56").click()
+# # click loan assessment report [general]
+# driver.find_element_by_id("TreeView15t57").click()
 
-time.sleep(5)
+# time.sleep(5)
 
-# Switch to new popup window
-for handle in driver.window_handles:
-    if handle != main_window: 
-        popup = handle
-        driver.switch_to.window(popup)
+# # Switch to new popup window
+# for handle in driver.window_handles:
+#     if handle != main_window: 
+#         popup = handle
+#         driver.switch_to.window(popup)
 
-# OPTIONAL: set date range in date fields
-# from date
+# # OPTIONAL: set date range in date fields
+# # from date
+# # driver.find_element_by_id("txtDf").clear()
+# # driver.find_element_by_id("txtDf").send_keys("7/1/2024")
+# # to date
+# # driver.find_element_by_id("txtDt").clear()
+# # driver.find_element_by_id("txtDt").send_keys("7/3/2024")
+
+# # click show report
+# button1 = WebDriverWait(driver, 20).until(
+#         EC.presence_of_element_located((By.NAME, "Button1"))
+#     )
+# button1.click()
+
+# # click export
+# exportbutton = WebDriverWait(driver, 20).until(
+#         EC.presence_of_element_located((By.NAME, "CrystalReportViewer1$ctl02$ctl00"))
+#     )
+# exportbutton.click() # WORKS UNTIL HERE
+
+# # Switch to new popup window
+# for handle in driver.window_handles:
+#     if handle != main_window: 
+#         popup = handle
+#         driver.switch_to.window(popup)
+
+# time.sleep(5)
+
+# # select MS Excel 97-2000 (Data Only)
+# select = Select(driver.find_element_by_name('exportformat'))
+# select.select_by_value('RecordToMSExcel')
+
+# # click ok
+# driver.find_element_by_id("submitexport").click()
+
+# time.sleep(10)
+
+# driver.quit()
+
+# # -- End LOAN ASSESSMENT script --
+
+# # -- Start LOAN DISBURSEMENT script --
+
+# # initialize new driver
+# firefox_options = FirefoxOptions()
+# service = FirefoxService(GeckoDriverManager().install())
+# driver = webdriver.Firefox(service=service, options=firefox_options)
+
+# # Store the current window handle
+# main_window = driver.current_window_handle
+
+# # Open the login page
+# driver.get('https://backupfs.provisocloud.com:255/default.aspx')
+
+# # enter username
+# driver.find_element_by_id("txtUserID").send_keys("505")
+# # enter password
+# driver.find_element_by_id("txtUserPassword").send_keys("123456")
+# # click login
+# driver.find_element_by_id("cmbLogin").click()
+
+# # TEMP FIX TO OVERRIDE FFOX WARNINGS
+# time.sleep(10)
+# print("start post-login")
+
+# # Switch to popup window
+# for handle in driver.window_handles:
+#     if handle != main_window: 
+#         popup = handle
+#         driver.switch_to.window(popup)
+
+# # click report menu
+# driver.find_element_by_id("TreeView15t0").click() 
+# # click loans report
+# driver.find_element_by_id("TreeView15t46").click()
+# # click loan transaction report
+# driver.find_element_by_id("TreeView15t75").click()
+# # click loan disbursement report
+# driver.find_element_by_id("TreeView15t76").click()
+# # click loan disbursement report [general]
+# driver.find_element_by_id("TreeView15t77").click()
+
+# time.sleep(5)
+
+# # Switch to new popup window
+# for handle in driver.window_handles:
+#     if handle != main_window: 
+#         popup = handle
+#         driver.switch_to.window(popup)
+
+# # FUTURE: set date range in date fields
+# # from date
 # driver.find_element_by_id("txtDf").clear()
 # driver.find_element_by_id("txtDf").send_keys("7/1/2024")
-# to date
+# # to date
 # driver.find_element_by_id("txtDt").clear()
 # driver.find_element_by_id("txtDt").send_keys("7/3/2024")
 
-# click show report
-button1 = WebDriverWait(driver, 20).until(
-        EC.presence_of_element_located((By.NAME, "Button1"))
-    )
-button1.click()
+# # click show report
+# button1 = WebDriverWait(driver, 20).until(
+#         EC.presence_of_element_located((By.ID, "Button1"))
+#     )
+# button1.click()
 
-# click export
-exportbutton = WebDriverWait(driver, 20).until(
-        EC.presence_of_element_located((By.NAME, "CrystalReportViewer1$ctl02$ctl00"))
-    )
-exportbutton.click() # WORKS UNTIL HERE
+# # click download report in Excel
+# button2 = WebDriverWait(driver, 60).until(
+#         EC.presence_of_element_located((By.ID, "Button2"))
+#     )
+# button2.click()
 
-# Switch to new popup window
-for handle in driver.window_handles:
-    if handle != main_window: 
-        popup = handle
-        driver.switch_to.window(popup)
-
-time.sleep(5)
-
-# select MS Excel 97-2000 (Data Only)
-select = Select(driver.find_element_by_name('exportformat'))
-select.select_by_value('RecordToMSExcel')
-
-# click ok
-driver.find_element_by_id("submitexport").click()
-
-time.sleep(10)
-
-driver.quit()
-
-# -- End LOAN ASSESSMENT script --
-
-# -- Start LOAN DISBURSEMENT script --
-
-# initialize new driver
-firefox_options = FirefoxOptions()
-service = FirefoxService(GeckoDriverManager().install())
-driver = webdriver.Firefox(service=service, options=firefox_options)
-
-# Store the current window handle
-main_window = driver.current_window_handle
-
-# Open the login page
-driver.get('https://backupfs.provisocloud.com:255/default.aspx')
-
-# enter username
-driver.find_element_by_id("txtUserID").send_keys("505")
-# enter password
-driver.find_element_by_id("txtUserPassword").send_keys("123456")
-# click login
-driver.find_element_by_id("cmbLogin").click()
-
-# TEMP FIX TO OVERRIDE FFOX WARNINGS
-time.sleep(10)
-print("start post-login")
-
-# Switch to popup window
-for handle in driver.window_handles:
-    if handle != main_window: 
-        popup = handle
-        driver.switch_to.window(popup)
-
-# click report menu
-driver.find_element_by_id("TreeView15t0").click() 
-# click loans report
-driver.find_element_by_id("TreeView15t46").click()
-# click loan transaction report
-driver.find_element_by_id("TreeView15t75").click()
-# click loan disbursement report
-driver.find_element_by_id("TreeView15t76").click()
-# click loan disbursement report [general]
-driver.find_element_by_id("TreeView15t77").click()
-
-time.sleep(5)
-
-# Switch to new popup window
-for handle in driver.window_handles:
-    if handle != main_window: 
-        popup = handle
-        driver.switch_to.window(popup)
-
-# FUTURE: set date range in date fields
-# from date
-driver.find_element_by_id("txtDf").clear()
-driver.find_element_by_id("txtDf").send_keys("7/1/2024")
-# to date
-driver.find_element_by_id("txtDt").clear()
-driver.find_element_by_id("txtDt").send_keys("7/3/2024")
-
-# click show report
-button1 = WebDriverWait(driver, 20).until(
-        EC.presence_of_element_located((By.ID, "Button1"))
-    )
-button1.click()
-
-# click download report in Excel
-button2 = WebDriverWait(driver, 60).until(
-        EC.presence_of_element_located((By.ID, "Button2"))
-    )
-button2.click()
-
-time.sleep(120)
+# time.sleep(120)
 
 
-# -- End LOAN DISBURSEMENT script --
+# # -- End LOAN DISBURSEMENT script --
 
 # -- Start LOAN APPLICATIONS script --
 
@@ -284,22 +285,21 @@ for handle in driver.window_handles:
 
 # DEFAULT TO TODAY'S DATE
 
-# FUTURE: set date range in date fields
 # from date
-# driver.find_element_by_id("txtDf").clear()
-# driver.find_element_by_id("txtDf").send_keys("7/1/2024")
+driver.find_element_by_id("txtDf").clear()
+driver.find_element_by_id("txtDf").send_keys("1/1/2024")
 # to date
-# driver.find_element_by_id("txtDt").clear()
-# driver.find_element_by_id("txtDt").send_keys("7/3/2024")
+driver.find_element_by_id("txtDt").clear()
+driver.find_element_by_id("txtDt").send_keys(datetime.today().strftime('%m/%d/%Y'))
 
 # click show report
-button1 = WebDriverWait(driver, 20).until(
+button1 = WebDriverWait(driver, 600).until(
         EC.presence_of_element_located((By.ID, "Button1"))
     )
 button1.click()
 
 # click download report in Excel
-button2 = WebDriverWait(driver, 60).until(
+button2 = WebDriverWait(driver, 600).until(
         EC.presence_of_element_located((By.ID, "Button2"))
     )
 button2.click()
