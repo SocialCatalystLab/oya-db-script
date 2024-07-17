@@ -1,6 +1,6 @@
 # Olaf de Rohan Willner
 # ocd4@cornell.edu / olaf.willner@econ.uzh.ch
-# Version: July 5, 2024
+# Version: July 17, 2024
 
 from selenium import webdriver
 from selenium.webdriver.common.by import By
@@ -80,141 +80,156 @@ button3.click()
 # accept alert dialog
 driver.switch_to.alert.accept()
 
-time.sleep(120)
+# wait 10 minutes
+time.sleep(600)
+
+# find and move downloaded file to DropBox
+found_file = None
+
+for root, dirs, files in os.walk("/Users/olafwillner/Downloads"):
+    for file in files:
+        if "LOAN_STATUS_REPORT_DETAILS_GENERAL" in file:
+            found_file = os.path.join(root, file)
+            break
+    if found_file:
+        print('Found loan status file')
+        break
+
+os.rename(found_file, "/Users/olafwillner/Downloads/loan_status.xls")
+shutil.move("/Users/olafwillner/Downloads/loan_status.xls", 
+            "/Users/olafwillner/Dropbox/Tanzania_Oya_Credit/data/src/loan_status/loan_status.xls")
 
 # -- End LOAN STATUS script --
 
 # -- Start LOAN APPLICATIONS script --
 
 # Store the current window handle
-main_window = driver.current_window_handle
+# main_window = driver.current_window_handle
 
-# Open the login page
-driver.get('https://backupfs.provisocloud.com:255/default.aspx')
+# # Open the login page
+# driver.get('https://backupfs.provisocloud.com:255/default.aspx')
 
-# enter username
-driver.find_element_by_id("txtUserID").send_keys("505")
-# enter password
-driver.find_element_by_id("txtUserPassword").send_keys("123456")
-# click login
-driver.find_element_by_id("cmbLogin").click()
+# # enter username
+# driver.find_element_by_id("txtUserID").send_keys("505")
+# # enter password
+# driver.find_element_by_id("txtUserPassword").send_keys("123456")
+# # click login
+# driver.find_element_by_id("cmbLogin").click()
 
-# TEMP FIX TO OVERRIDE FFOX WARNINGS
-time.sleep(10)
-print("start post-login")
+# # TEMP FIX TO OVERRIDE FFOX WARNINGS
+# time.sleep(10)
+# print("start post-login")
 
-# Switch to popup window
-for handle in driver.window_handles:
-    if handle != main_window: 
-        popup = handle
-        driver.switch_to.window(popup)
+# # Switch to popup window
+# for handle in driver.window_handles:
+#     if handle != main_window: 
+#         popup = handle
+#         driver.switch_to.window(popup)
 
-# click report menu
-driver.find_element_by_id("TreeView15t0").click() 
-# click loans report
-driver.find_element_by_id("TreeView15t46").click()
-# click loan application report
-driver.find_element_by_id("TreeView15t47").click()
-# click loan application report
-driver.find_element_by_id("TreeView15t48").click()
+# # click report menu
+# driver.find_element_by_id("TreeView15t0").click() 
+# # click loans report
+# driver.find_element_by_id("TreeView15t46").click()
+# # click loan application report
+# driver.find_element_by_id("TreeView15t47").click()
+# # click loan application report
+# driver.find_element_by_id("TreeView15t48").click()
 
-time.sleep(5)
+# time.sleep(5)
 
-# Switch to new popup window
-for handle in driver.window_handles:
-    if handle != main_window: 
-        popup = handle
-        driver.switch_to.window(popup)
+# # Switch to new popup window
+# for handle in driver.window_handles:
+#     if handle != main_window: 
+#         popup = handle
+#         driver.switch_to.window(popup)
 
-# DEFAULT TO TODAY'S DATE
-# from date
-driver.find_element_by_id("txtDf").clear()
-driver.find_element_by_id("txtDf").send_keys("1/1/2024")
-# to date
-driver.find_element_by_id("txtDt").clear()
-driver.find_element_by_id("txtDt").send_keys(datetime.today().strftime('%m/%d/%Y'))
+# # DEFAULT TO TODAY'S DATE
+# # from date
+# driver.find_element_by_id("txtDf").clear()
+# driver.find_element_by_id("txtDf").send_keys("1/1/2024")
+# # to date
+# driver.find_element_by_id("txtDt").clear()
+# driver.find_element_by_id("txtDt").send_keys(datetime.today().strftime('%m/%d/%Y'))
 
-# click show report
-button1 = WebDriverWait(driver, 600).until(
-        EC.presence_of_element_located((By.ID, "Button1"))
-    )
-button1.click()
+# # click show report
+# button1 = WebDriverWait(driver, 600).until(
+#         EC.presence_of_element_located((By.ID, "Button1"))
+#     )
+# button1.click()
 
-# click download report in Excel
-button2 = WebDriverWait(driver, 600).until(
-        EC.presence_of_element_located((By.ID, "Button2"))
-    )
-button2.click()
+# # click download report in Excel
+# button2 = WebDriverWait(driver, 600).until(
+#         EC.presence_of_element_located((By.ID, "Button2"))
+#     )
+# button2.click()
 
-time.sleep(120)
+# time.sleep(360)
 
 # -- End LOAN APPLICATIONS script --
 
 # -- Start LOAN REPAYMENT script --
 
 # Store the current window handle
-main_window = driver.current_window_handle
+# main_window = driver.current_window_handle
 
-# Open the login page
-driver.get('https://backupfs.provisocloud.com:255/default.aspx')
+# # Open the login page
+# driver.get('https://backupfs.provisocloud.com:255/default.aspx')
 
-# enter username
-driver.find_element_by_id("txtUserID").send_keys("505")
-# enter password
-driver.find_element_by_id("txtUserPassword").send_keys("123456")
-# click login
-driver.find_element_by_id("cmbLogin").click()
+# # enter username
+# driver.find_element_by_id("txtUserID").send_keys("505")
+# # enter password
+# driver.find_element_by_id("txtUserPassword").send_keys("123456")
+# # click login
+# driver.find_element_by_id("cmbLogin").click()
 
-# TEMP FIX TO OVERRIDE FFOX WARNINGS
-time.sleep(10)
-print("start post-login")
+# # TEMP FIX TO OVERRIDE FFOX WARNINGS
+# time.sleep(10)
+# print("start post-login")
 
-# Switch to popup window
-for handle in driver.window_handles:
-    if handle != main_window: 
-        popup = handle
-        driver.switch_to.window(popup)
+# # Switch to popup window
+# for handle in driver.window_handles:
+#     if handle != main_window: 
+#         popup = handle
+#         driver.switch_to.window(popup)
 
-# click report menu
-driver.find_element_by_id("TreeView15t0").click() 
-# click loans report
-driver.find_element_by_id("TreeView15t46").click()
-# click loan transaction report
-driver.find_element_by_id("TreeView15t75").click()
-# click loan repayment report
-driver.find_element_by_id("TreeView15t81").click()
-# click received
-driver.find_element_by_id("TreeView15t86").click()
-# click loan repayment report [RECEIVED]
-driver.find_element_by_id("TreeView15t87").click()
+# # click report menu
+# driver.find_element_by_id("TreeView15t0").click() 
+# # click loans report
+# driver.find_element_by_id("TreeView15t46").click()
+# # click loan transaction report
+# driver.find_element_by_id("TreeView15t75").click()
+# # click loan repayment report
+# driver.find_element_by_id("TreeView15t81").click()
+# # click received
+# driver.find_element_by_id("TreeView15t86").click()
+# # click loan repayment report [RECEIVED]
+# driver.find_element_by_id("TreeView15t87").click()
 
-time.sleep(5)
+# time.sleep(5)
 
-# Switch to new popup window
-for handle in driver.window_handles:
-    if handle != main_window: 
-        popup = handle
-        driver.switch_to.window(popup)
+# # Switch to new popup window
+# for handle in driver.window_handles:
+#     if handle != main_window: 
+#         popup = handle
+#         driver.switch_to.window(popup)
 
-# DEFAULT TO TODAY'S DATE
-# from date
-driver.find_element_by_id("txtDf").clear()
-driver.find_element_by_id("txtDf").send_keys("7/1/2024")
-# to date
-driver.find_element_by_id("txtDt").clear()
-driver.find_element_by_id("txtDt").send_keys(datetime.today().strftime('%m/%d/%Y'))
+# # DEFAULT TO TODAY'S DATE
+# # from date
+# driver.find_element_by_id("txtDf").clear()
+# driver.find_element_by_id("txtDf").send_keys("7/1/2024")
+# # to date
+# driver.find_element_by_id("txtDt").clear()
+# driver.find_element_by_id("txtDt").send_keys(datetime.today().strftime('%m/%d/%Y'))
 
-# click download report in Excel
-button2 = WebDriverWait(driver, 600).until(
-        EC.presence_of_element_located((By.ID, "Button2"))
-    )
-button2.click()
+# # click download report in Excel
+# button2 = WebDriverWait(driver, 600).until(
+#         EC.presence_of_element_located((By.ID, "Button2"))
+#     )
+# button2.click()
 
-time.sleep(120)
+# time.sleep(120)
 
-os.rename("path/to/current/file.foo", "path/to/new/destination/for/file.foo")
-os.replace("path/to/current/file.foo", "path/to/new/destination/for/file.foo")
-shutil.move("path/to/current/file.foo", "path/to/new/destination/for/file.foo")
+# shutil.move("path/to/current/file.foo", "path/to/new/destination/for/file.foo")
 
 # -- End LOAN REPAYMENT script --
 
